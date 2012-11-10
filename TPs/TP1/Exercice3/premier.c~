@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+#define PI 3.14
+
+void main(void)
+{
+  /* Variables definition */
+  double rayon = 10.0 ;
+  double aire ;
+
+  /* Traitement */
+  aire = PI*rayon*rayon ;
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main( int argc, char *argv[] )
+{
+  /* *** Variables *** */
+  
+  int i = 0 ;
+
+
+  /* *** Check Parameters *** */
+
+  if( argc < 2 )                                               /* Bad parameters?                      */
+    {
+      printf( "Program <Parameter>\n" ) ;
+      return 1 ;
+    }
+
+  /* *** Computing *** */
+
+
+
+  /* *** End of Program *** */
+
+  return 0 ;
+}

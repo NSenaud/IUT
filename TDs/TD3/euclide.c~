@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	unsigned long long a;
+	unsigned long long b;
+
+	cout << "Enter two integers:" << endl;
+	cin >> a >> b;
+
+	unsigned long long t;
+
+	while(b!=0)
+	{
+		cout << a << endl;
+		t = b;
+		b = a%b;
+		a = t;
+	}
+
+	cout << "GCD is: " << a << endl;
+}

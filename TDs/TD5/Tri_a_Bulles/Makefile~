@@ -1,0 +1,11 @@
+reciprocal: main.o cpp_file.o
+	g++ $(CFLAGS) -o program main.o cpp_file.o
+
+main.o: src/main.c include/cpp_header.hpp
+	gcc $(CFLAGS) -c src/main.c
+
+reciprocal.o: src/cpp_file.cpp include/cpp_header.hpp
+	g++ $(CFLAGS) -c src/cpp_file.cpp 
+
+clean:
+	rm -f *.o program

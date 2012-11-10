@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int createCode() ;
+int tryCode( int x ) ;
+
+int main()
+{
+  // Déclaration des Variables
+  int code=0, found=0 ;
+
+  // Initialisation du Code
+  int createCode() ;
+
+  // Traitement
+  while( (code < 9999) || (found == 0) )
+    {
+      if( code == tryCode(code) )
+	found = 1 ;
+      else
+	++code ;
+    }
+
+  // Sortie
+  printf("Found Code = %d", code) ;
+
+  return 0 ;
+}
+
+int createCode()
+{

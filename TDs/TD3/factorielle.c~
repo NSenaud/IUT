@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <limits.h>
+
+int main()
+{
+  unsigned long int facto = 0 ;
+  int i=1, n=1 ;
+
+  // Entrées
+  printf("n = ")  ;
+  scanf("%d", &n) ;
+
+  // Traitement
+  while( (i<=n) && (facto < (ULLONG_MAX/i) ))
+    {
+      facto = facto*i ;
+      i++ ;
+    }
+
+  // Sortie
+  printf("%d! = %li\n", n, facto) ;
+  
+  return 0 ;
+}

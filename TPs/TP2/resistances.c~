@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+  // Déclaration des variables
+  short int bande1=0, bande2=0, bande3=0 ;
+
+  // Entrées
+  printf("Bande 1 : ") ;
+  scanf("%d", &bande1) ;
+
+  printf("Bande 2 : ") ;
+  scanf("%d", &bande2) ;
+
+  printf("Bande 3 : ") ;
+  scanf("%d", &bande3) ;
+
+  // Calcul

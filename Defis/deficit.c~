@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+#define DEFICIT_MAX_NORM  0.5
+#define DEFICIT_MAX_EXEP  1.0
+#define DETTE_PUBLI_EXEP 60.0
+
+int main()
+{
+  /* *** Declaration des variables *** */
+  int regle_dor=0, circons=0 ;
+  double deficit, dette ;
+
+  /* *** Preparation *** */
+  puts("***\t Respect de la regle d'or budgetaire\t***\n")       ;
+  puts("(Les valeurs doivent etre donnees en Milliards d'Euros") ;
+
+  printf("Deficite : ") ;
+scanf
