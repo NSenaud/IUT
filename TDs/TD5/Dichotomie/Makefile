@@ -1,0 +1,14 @@
+dichotomie: main.o arrange.o dichotomie.o
+	gcc $(CFLAGS) -o dichotomie main.o dichotomie.o arrange.o
+	
+main.o: src/main.c include/dichotomie.h include/arrange.h
+	gcc $(CFLAGS) -c src/main.c
+	
+dichotomie.o: src/dichotomie.c include/dichotomie.h
+	gcc $(CFLAGS) -c src/dichotomie.c
+	
+arrange.o: src/arrange.c include/dichotomie.h
+	gcc $(CFLAGS) -c src/arrange.c
+	
+clean:
+	rm -f *.o reciprocal

@@ -1,0 +1,64 @@
+/*                                      <Dichotomie>                                         *
+ * Copyright (C) 2012                                                                        *
+ *
+ * Description : Search by dichotomie a number in an array. The idea is to divide by 2 the   *
+ *               amount of data search in (the minus).                                       *
+ *
+ * Author: Nicolas Senaud <nicolas@senaud.fr>                                                *
+ *         Copyright (C) 2012                                                                *
+ *
+ * Licence:
+ * Dichotomie is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Dichotomie is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.                           */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define ARRAY_SIZE 100
+
+/* *** Main *** */
+
+int main (int argc, char *argv[])
+{
+	/* *** Variables Declaration *** */
+	
+	short int i = 0 ;
+	short int array[ARRAY_SIZE] ;
+	
+	/* Fill the Array with Random Datas */
+	for (i=0 ; i<ARRAY_SIZE ; i++)
+	{
+		array[i] = rand()%ARRAY_SIZE ;
+	}
+	
+	/* Print Generated Datas */
+	printf("*** Generated Datas ***\n") ;
+	for (i=0 ; i<ARRAY_SIZE ; i++)
+	{
+		printf ("%d\n", array[i]) ;
+	}
+	
+	
+	
+	
+	
+	/* *** Computing *** */
+	
+	
+	
+	
+	/* *** End of Program *** */
+	
+	return 0 ;
+}

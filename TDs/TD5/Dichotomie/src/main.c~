@@ -1,0 +1,95 @@
+/*                                      <Dichotomie>                                         *
+ * Copyright (C) 2012                                                                        *
+ *
+ * Description : Search by dichotomie a number in an array. The idea is to divide by 2 the   *
+ *               amount of data search in (the minus).                                       *
+ *
+ * Author: Nicolas Senaud <nicolas@senaud.fr>                                                *
+ *         Copyright (C) 2012                                                                *
+ *
+ * Licence:
+ * Dichotomie is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * Dichotomie is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.                           */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "../include/arrange.h"
+#include "../include/dichotomie.h"
+
+
+#define ARRAY_SIZE 15
+
+
+int main (int argc, char *argv[])
+{
+	/* *** Variables Declaration *** */
+	
+	short int i = 0, j = 0 ;
+	short int array[ARRAY_SIZE] ;
+	short int item = 0 ;			// Item to search.
+	short int index = 0 ;			// Index of the item searched.
+	
+	/* Fill the Array with Random Datas */
+	for (i=0 ; i<ARRAY_SIZE ; i++)
+	{
+		array[i] = rand()%(10*ARRAY_SIZE) ;	// Generate a number between 0 and 10 times the size of the array.
+		
+		/* Avoid 2 Generated Values Could be the Same */
+		for (j=0 ; j<i ; j++)
+		{
+			if (array[i] == array[j])
+			{
+				++array[i] ;
+				--j ;
+			}
+		}
+	}
+	
+	
+	/* *** Treatment *** */
+	
+	/* Arrange the Array */
+	arrange (array, ARRAY_SIZE) ;		// Sort the array.
+	
+	/* Print Generated Datas */
+	puts("\n*** Generated Datas ***\n") ;
+	for (i=0 ; i<ARRAY_SIZE ; i++)
+	{
+		printf ("%d\t", i) ;
+	}
+	printf("\n") ;
+	for (i=0 ; i<ARRAY_SIZE ; i++)
+	{
+		printf ("%d\t", array[i]) ;
+	}
+	printf ("\n") ;
+	
+	/* Inputs */
+	printf ("\nWhat number you want to search it index? ") ;
+	scanf ("%d", &item) ;
+	
+	/* Search */
+	index = dichotomie (array, ARRAY_SIZE, item) ;
+	
+	
+	/* *** Output *** */
+	
+	puts ("\n*** Searching ***\n") ;
+	printf ("The index of %d is %d.\n", item, index) ;
+	
+	
+	/* *** End of Program *** */
+	
+	return 0 ;
+}
