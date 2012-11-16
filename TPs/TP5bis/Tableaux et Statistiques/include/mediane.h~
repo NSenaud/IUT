@@ -1,0 +1,1 @@
+extern double calc_med (double * notes, int n_items) ;

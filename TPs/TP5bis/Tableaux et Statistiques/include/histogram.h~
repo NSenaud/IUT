@@ -1,0 +1,2 @@
+extern void histogram (int * histo, double * tab, int tab_size, int min_value, int max_value) ;
+extern void display_histogram (int * histogram, int max_value) ;

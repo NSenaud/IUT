@@ -1,0 +1,20 @@
+program: main.o moyenne.o mediane.o tri.o histogram.o
+	gcc $(CFLAGS) -o program main.o moyenne.o mediane.o tri.o histogram.o
+
+main.o: src/main.c include/moyenne.h include/mediane.h
+	gcc $(CFLAGS) -c src/main.c
+
+moyenne.o: src/moyenne.c include/moyenne.h
+	gcc $(CFLAGS) -c src/moyenne.c
+	
+mediane.o: src/mediane.c include/mediane.h include/moyenne.h
+	gcc $(CFLAGS) -c src/mediane.c include/moyenne.h
+	
+tri.o: src/tri.c include/tri.h
+	gcc $(CFLAGS) -c src/tri.c include/tri.h
+	
+histogram.o: src/histogram.c include/histogram.h
+	gcc $(CFLAGS) -c src/histogram.c include/histogram.h
+
+clean:
+	rm -f *.o program
